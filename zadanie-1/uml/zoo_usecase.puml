@@ -1,0 +1,10 @@
+@startuml
+
+actor Opiekun
+
+Opiekun --> (Dodaj zwierzę do ZOO)
+Opiekun --> (Karm zwierzę)
+Opiekun --> (Czesz futro zwierzęcia)
+Opiekun --> (Wyświetl zwierzęta w ZOO)
+
+@enduml 

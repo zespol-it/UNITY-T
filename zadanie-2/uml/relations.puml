@@ -1,0 +1,27 @@
+@startuml
+
+entity "authors" as authors {
+  + id : serial <<PK>>
+  first_name : varchar
+  last_name : varchar
+}
+
+entity "books" as books {
+  + id : serial <<PK>>
+  author_id : int <<FK>>
+  title : varchar
+  publication_year : int
+  isbn : varchar
+}
+
+entity "reviews" as reviews {
+  + id : serial <<PK>>
+  book_id : int <<FK>>
+  rating : int
+  content : text
+}
+
+authors ||--o{ books : "author_id"
+books ||--o{ reviews : "book_id"
+
+@enduml 

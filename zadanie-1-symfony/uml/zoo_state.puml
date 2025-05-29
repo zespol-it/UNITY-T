@@ -1,0 +1,10 @@
+@startuml
+
+[*] --> W_ZOO
+W_ZOO : zwierzę zostało dodane do ZOO
+W_ZOO --> KARMIONE : karmienie
+KARMIONE --> W_ZOO : koniec karmienia
+W_ZOO --> CZESANE : czesanie futra
+CZESANE --> W_ZOO : koniec czesania
+
+@enduml 

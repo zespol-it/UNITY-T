@@ -1,0 +1,56 @@
+@startuml
+
+abstract class Animal {
+  - name: string
+  + __toString(): string
+  + getSpecies(): string
+}
+
+interface Carnivore {
+  + eatMeat(food: string): void
+}
+
+interface Herbivore {
+  + eatPlants(food: string): void
+}
+
+interface Omnivore {
+  + eatMeat(food: string): void
+  + eatPlants(food: string): void
+}
+
+interface Fur {
+  + brushFur(): void
+}
+
+class Tiger extends Animal implements Carnivore, Fur
+class Elephant extends Animal implements Herbivore
+class Rhinoceros extends Animal implements Herbivore
+class Fox extends Animal implements Omnivore, Fur
+class SnowLeopard extends Animal implements Carnivore, Fur
+class Rabbit extends Animal implements Herbivore, Fur
+
+class Zoo {
+  + addAnimal(animal: Animal): void
+  + showAnimals(): void
+}
+
+Animal <|-- Tiger
+Animal <|-- Elephant
+Animal <|-- Rhinoceros
+Animal <|-- Fox
+Animal <|-- SnowLeopard
+Animal <|-- Rabbit
+
+Tiger ..|> Carnivore
+Tiger ..|> Fur
+Elephant ..|> Herbivore
+Rhinoceros ..|> Herbivore
+Fox ..|> Omnivore
+Fox ..|> Fur
+SnowLeopard ..|> Carnivore
+SnowLeopard ..|> Fur
+Rabbit ..|> Herbivore
+Rabbit ..|> Fur
+
+@enduml 

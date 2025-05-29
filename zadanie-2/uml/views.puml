@@ -1,0 +1,35 @@
+@startuml
+
+entity "authors" as authors {
+  id : serial <<PK>>
+  first_name : varchar
+  last_name : varchar
+}
+
+entity "books" as books {
+  id : serial <<PK>>
+  author_id : int <<FK>>
+  title : varchar
+  publication_year : int
+  isbn : varchar
+}
+
+entity "reviews" as reviews {
+  id : serial <<PK>>
+  book_id : int <<FK>>
+  rating : int
+  content : text
+}
+
+entity "top5_authors_by_avg_rating" as view {
+  id : int
+  first_name : varchar
+  last_name : varchar
+  avg_rating : float
+}
+
+authors ||--o{ books
+books ||--o{ reviews
+view }|..|| authors : "id"
+
+@enduml 

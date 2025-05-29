@@ -1,0 +1,60 @@
+@startuml
+
+package "App\\Entity" {
+  abstract class Animal {
+    - name: string
+    + __toString(): string
+    + getSpecies(): string
+  }
+
+  interface CarnivoreInterface {
+    + eatMeat(food: string): void
+  }
+
+  interface HerbivoreInterface {
+    + eatPlants(food: string): void
+  }
+
+  interface OmnivoreInterface {
+    + eatMeat(food: string): void
+    + eatPlants(food: string): void
+  }
+
+  interface FurInterface {
+    + brushFur(): void
+  }
+
+  class Tiger extends Animal implements CarnivoreInterface, FurInterface
+  class Elephant extends Animal implements HerbivoreInterface
+  class Rhinoceros extends Animal implements HerbivoreInterface
+  class Fox extends Animal implements OmnivoreInterface, FurInterface
+  class SnowLeopard extends Animal implements CarnivoreInterface, FurInterface
+  class Rabbit extends Animal implements HerbivoreInterface, FurInterface
+}
+
+package "App\\Service" {
+  class Zoo {
+    + addAnimal(animal: Animal): void
+    + showAnimals(): void
+  }
+}
+
+Animal <|-- Tiger
+Animal <|-- Elephant
+Animal <|-- Rhinoceros
+Animal <|-- Fox
+Animal <|-- SnowLeopard
+Animal <|-- Rabbit
+
+Tiger ..|> CarnivoreInterface
+Tiger ..|> FurInterface
+Elephant ..|> HerbivoreInterface
+Rhinoceros ..|> HerbivoreInterface
+Fox ..|> OmnivoreInterface
+Fox ..|> FurInterface
+SnowLeopard ..|> CarnivoreInterface
+SnowLeopard ..|> FurInterface
+Rabbit ..|> HerbivoreInterface
+Rabbit ..|> FurInterface
+
+@enduml 
