@@ -9,15 +9,15 @@ System klas wirtualnego ZOO w strukturze Symfony:
 
 ### Diagram klas (UML)
 
-![Diagram klas UML](uml/zoo.jpg)
+![Diagram klas UML](uml/zoo.png)
 
 ### Diagram stanu (UML)
 
-![Diagram stanu UML](uml/zoo_state.jpg)
+![Diagram stanu UML](uml/zoo_state.png)
 
 ### Diagram przypadków użycia (Use Case)
 
-![Diagram use case UML](uml/zoo_usecase.jpg)
+![Diagram use case UML](uml/zoo_usecase.png)
 
 ### Diagram klas (tekstowy UML)
 
@@ -54,15 +54,15 @@ Virtual ZOO class system in Symfony structure:
 
 ### Class diagram (UML)
 
-![UML class diagram](uml/zoo.jpg)
+![UML class diagram](uml/zoo.png)
 
 ### State diagram (UML)
 
-![UML state diagram](uml/zoo_state.jpg)
+![UML state diagram](uml/zoo_state.png)
 
 ### Use case diagram (UML)
 
-![UML use case diagram](uml/zoo_usecase.jpg)
+![UML use case diagram](uml/zoo_usecase.png)
 
 ### Class diagram (text UML)
 

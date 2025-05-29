@@ -6,15 +6,15 @@ Baza danych przechowuje autorów książek, książki oraz recenzje. Struktura r
 
 ### Diagram ERD (UML)
 
-![Diagram ERD](uml/erd.jpg)
+![Diagram ERD](uml/erd.png)
 
 ### Diagram relacji (UML)
 
-![Diagram relacji](uml/relations.jpg)
+![Diagram relacji](uml/relations.png)
 
 ### Diagram widoków (UML)
 
-![Diagram widoków](uml/views.jpg)
+![Diagram widoków](uml/views.png)
 
 ### Diagram ERD (tekstowy)
 
@@ -48,15 +48,15 @@ The database stores book authors, books, and reviews. The relationship structure
 
 ### ERD Diagram (UML)
 
-![ERD Diagram](uml/erd.jpg)
+![ERD Diagram](uml/erd.png)
 
 ### Relations diagram (UML)
 
-![Relations diagram](uml/relations.jpg)
+![Relations diagram](uml/relations.png)
 
 ### Views diagram (UML)
 
-![Views diagram](uml/views.jpg)
+![Views diagram](uml/views.png)
 
 ### ERD Diagram (text)
 
